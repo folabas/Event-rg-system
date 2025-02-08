@@ -1,11 +1,11 @@
 // Contains the title, description and search input 
 
-function SearchSection({ activeTab }) {
+function SearchSection({ activeTab, availableEvents, registeredEvents }) {
   return (
     <div className="flex justify-between items-center mb-6">
       <div>
         <h1 className="text-2xl font-bold text-purple-900">
-          {activeTab === 'available' ? 'Available Events' : 'Registered Events'} (20)
+          {activeTab === 'available' ? 'Available Events' : 'Registered Events'} ({activeTab === 'available' ? availableEvents.length : registeredEvents.length})
         </h1>
         <p className="text-sm text-gray-600">
           {activeTab === 'available' 

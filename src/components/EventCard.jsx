@@ -38,12 +38,11 @@ function EventCard({ event, activeTab, onRegister, onCancel }) {
         </div>
       </div>
       <button
-        onClick={() => activeTab === 'available' ? onRegister(event) : onCancel()}
-        className={`h-8 px-6 rounded-full text-sm font-medium ${
-          activeTab === 'available'
+        onClick={() => activeTab === 'available' ? onRegister(event) : onCancel(event)}
+        className={`h-8 px-6 rounded-full text-sm font-medium ${activeTab === 'available'
             ? 'bg-purple-900 text-white hover:bg-purple-800'
             : 'bg-purple-900 text-white hover:bg-red-600'
-        }`}
+          }`}
       >
         {activeTab === 'available' ? 'Register' : 'Cancel Registration'}
       </button>

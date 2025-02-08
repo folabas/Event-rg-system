@@ -1,6 +1,6 @@
 // Cancel confirmation modal 
 
-function CancelModal({ onClose, onConfirm }) {
+function CancelModal({ onClose, onConfirm, event }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-[32px] p-8 w-[671px] relative">
